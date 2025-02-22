@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="form.css">
+    <title>お問い合わせフォーム</title>
+</head>
+<body>
+  <section id="Form">
+      <p class="err"></p>
+        <div class="Form-Item">
+          <p class="Form-Item-Label">
+            <span class="Form-Item-Label-Required">必須</span>会社名
+          </p>
+          <input type="text" class="Form-Item-Input" name="company">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+          <input type="text" class="Form-Item-Input" name="name">
+        </div>
+        <div class="Form-radioItem">
+          <p class="Form-Item-Label">資料請求</p>
+          <input type="radio" id="need" name="btn-main" onclick="formSwitch()">必要
+          <input type="radio" id="unnecessary" name="btn-main" onclick="formSwitch()">不必要
+        </div>
+        <form name='form1'>
+          <div id="need_form" style="display: none;">
+            <div class="Form-Item">
+              <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>住所</p>
+              <div>
+              郵便番号(ハイフンあり)<input type="text" class="Form-radioItem-Input" name="postcode" value=""><div class="post"></div>
+              都道府県<input type="text" class="Form-radioItem-Input" name="prefectures" value="">
+              市区町村<input type="text" class="Form-radioItem-Input" name="city" value="">
+              建物名<input type="text" class="Form-radioItem-Input" name="building" value="">
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="Form-Item">
+          <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+          <div>
+          <input type="email" class="Form-Item-Input" name="mail" ><div class="input_mistake"></div>
+          </div>
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+          <textarea class="Form-Item-Textarea" name="message"></textarea>
+        </div>
+        <div class="submit-button"><button>送信する</button></div>
+      </section>
+    <section id="end">
+        <div>
+            <h1 class="send">メール送信完了</h1>
+            <p>
+                お問い合わせありがとうございます。<br>
+                3営業日以内にご連絡致します。
+            </p>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

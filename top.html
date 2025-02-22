@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--jquery読み込み-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!--デザイン調整CSS-->
+<link rel="stylesheet" href="top.css">
+
+    <title>top</title>
+</head>
+<body>
+  <div class="js-text-anime">
+    <h1><a href="top.html" class="top">株式会社スターダスト</a></h1>
+  </div>
+    <!-- スライドの外枠 -->
+<div class="slide-wrapper">
+    <!-- スライド（コンテンツ） -->
+    <div id="slide" class="slide">
+      <div>
+        <li><a href="form.html">お問い合わせフォーム</a></li>
+      </div>
+      <div>
+        <p>ダミースライド２</p>
+      </div>
+      <div>
+        <p>ダミースライド３</p>
+      </div>
+    </div>
+    <!-- 左右のボタン -->
+    <span id="prev" class="prev"></span>
+    <span id="next" class="next"></span>
+    <!-- インジケーター -->
+    <ul class="indicator" id="indicator">
+      <li class="list"></li>
+      <li class="list"></li>
+      <li class="list"></li>
+    </ul>
+  </div>
+  <script src="slide.js"></script>
+  <script src="top.js"></script>
+</body>
+</html>
